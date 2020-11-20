@@ -1,0 +1,87 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+<script>
+$(document).ready(function() {
+  $("#ckLED1").change(function() {
+    var isChecked = $("#ckLED1").is(":checked") ? 1:0; 
+    $.ajax({
+            url: '/action1',
+            type: 'POST',
+            data: { strID:'ckLED', strState:isChecked }
+    });
+  });
+  $("#ckLED2").change(function() {
+    var isChecked = $("#ckLED2").is(":checked") ? 1:0; 
+    $.ajax({
+            url: '/action2',
+            type: 'POST',
+            data: { strID:'ckLED', strState:isChecked }
+    });
+  });
+  $("#ckLED3").change(function() {
+    var isChecked = $("#ckLED3").is(":checked") ? 1:0; 
+    $.ajax({
+            url: '/action3',
+            type: 'POST',
+            data: { strID:'ckLED', strState:isChecked }
+    });
+  });
+  $("#ckLED4").change(function() {
+    var isChecked = $("#ckLED4").is(":checked") ? 1:0; 
+    $.ajax({
+            url: '/action4',
+            type: 'POST',
+            data: { strID:'ckLED', strState:isChecked }
+    });
+  });
+  $("#ckLED5").change(function() {
+    var isChecked = $("#ckLED5").is(":checked") ? 1:0; 
+    $.ajax({
+            url: '/action5',
+            type: 'POST',
+            data: { strID:'ckLED', strState:isChecked }
+    });
+  });
+});
+
+</script>
+</head>
+<body>
+<div data-role="page">
+  <div data-role="main" class="ui-content">
+    <form>
+        <label for="switch">Appliance 1</label>
+        <input type="checkbox" data-role="flipswitch" name="switch" id="ckLED1">
+    </form>
+ </div>
+ <div data-role="main" class="ui-content">
+  <form>
+      <label for="switch">Appliance 2</label>
+      <input type="checkbox" data-role="flipswitch" name="switch" id="ckLED2">
+  </form>
+</div>
+<div data-role="main" class="ui-content">
+  <form>
+      <label for="switch">Appliance 3</label>
+      <input type="checkbox" data-role="flipswitch" name="switch" id="ckLED3">
+  </form>
+</div>
+<div data-role="main" class="ui-content">
+  <form>
+      <label for="switch">Appliance 4</label>
+      <input type="checkbox" data-role="flipswitch" name="switch" id="ckLED4">
+  </form>
+</div>
+<div data-role="main" class="ui-content">
+  <form>
+      <label for="switch">Appliance 5</label>
+      <input type="checkbox" data-role="flipswitch" name="switch" id="ckLED5">
+  </form>
+</div>
+</div>
+</body>
+</html>
