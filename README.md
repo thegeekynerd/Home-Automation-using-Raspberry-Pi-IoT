@@ -13,3 +13,8 @@ Routes:
 /switch : for controlling the Appliances from one page
 /action<number> : number ranges from 1 to 5, request for direct appliance control
 /status : Get status information on appliances, on or off, along with total running time (running streak to be added)
+
+
+To run execute: python automation.py
+python3 automation.py( for linux)
+Use Python 3 environment
